@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.decoration {
+  position: absolute;
+  z-index: -1;
+}
+
+/* NAVIGATION */
+.topNav, .bottomNav {
+  display: flex;
+  justify-content: space-around;
+  padding: 6vh;
+}
+.topNav a, .bottomNav a {
+  color: #0DF205;
+  background-color: #040DBF;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 2vw;
+  text-decoration: none;
+}
+
+.topNav a:hover, .bottomNav a:hover {
+  color: #f2e205;
+}
+
+.contrast a {
+  color: #EE05F2;
+  background-color: black;
+}
+
+/* HOME PAGE */
+.homePage {
+  background-image: url('images/face2.jpg');
+}
+.title h1{
+  animation: title 1s infinite;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4vw;
+  margin: 0 0 6vh 14vw;
+  transform: scaleY(2);
+}
+
+.decoration > #hand {
+  position: fixed;
+  top: 22vh;
+  right: 1vw;
+  display: block;
+  animation: hand 2s infinite alternate-reverse;
+}
+
+#face {
+  transform: scale(-1,-1);
+  position: fixed;
+  z-index: -1;
+  top: 3px;
+  left: -5vw;
+  height: 105vh;
+}
+
+/* DEFINITION PAGE */
+.backgroundWords {
+  background-color: black;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+.backgroundWords p {
+  margin: 0;
+  color: #0DF205;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  width: 125vw;
+  opacity: 0.5;
+  transition: width, 2s;
+}
+.definitionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.definitionBox {
+  border: 2px solid #EE05F2;
+  background-color: black;
+  width: 30vmax;
+  height: 30vmax;
+}
+.definitionBox p {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.5vw;
+  color: #EE05F2;
+  margin: 1.5vw;
+}
+.definitionContainer img {
+  position: fixed;
+  display: block;
+  z-index: 1;
+  width: 29vmax;
+  height: 29vmax;
+}
+
+/* RESOURCES PAGE */
+.resourcesGrid {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image:
+      repeating-linear-gradient(#FF0072 0 2px, transparent 7px 100%),
+      repeating-linear-gradient(90deg, #EE05F2 0 2px, transparent 2px 100%);
+    background-size: 71px 71px;
+    background-color: black;
+}
+.resourcesGridAnimate {
+  animation: grid 2s infinite linear;
+}
+.resources {
+  padding: 6vw 0 8vw 8vw;
+}
+
+.resources h1 {
+  font-family: 'Press Start 2P', cursive;
+  transform: scaley(2);
+  font-size: 2.5vw;
+  padding: 0 1vw 1vw 2vw;
+  color: #0DF205;
+  /* animation: title 2s infinite; */
+}
+.resources a {
+  font-family: 'Source Code Pro';
+  color: #0DF205;
+  background-color: #040DBF;
+  font-size: 3vh;
+  margin: 3vw 1vw 3vw 3vw;
+}
+#glitch {
+  display: block;
+  position: fixed;
+  top: 22vh;
+  right: 10vw;
+}
+
+/* GALLERY PAGE */
+#topPosition {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#bottomPosition {
+  position: sticky;
+  bottom: 0;
+}
+.galleryContainer img {
+  width: 60%;
+}
+.grid-item {
+  margin-bottom: 10px;
+  margin-left: 25vw;
+}
+.bg {
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+/* ORIGINS PAGE */
+.originsPage {
+  background-color: black;
+}
+.quotes h2 {
+  font-family: 'Source Code Pro', cursive;
+  margin: 1vw;
+  line-height: 3vw;
+  font-size: 2vw;
+  color: #F2E205;
+}
+.quotes p, .quotes a {
+  font-family: 'Source Code Pro';
+  color: #0DF205;
+  margin: 4vw;
+  font-size: 1.5vw;
+}
+.quotes {
+  border: 2px solid #040DBF;
+  padding: 3vw;
+  margin: 0 14vw 0 14vw;
+}
+#eye {
+  width: 25vw;
+}
+
+/* POST CYBERFEMINISM PAGE */
+.postPage {
+  background-color: black;
+}
+.quotes2 h2, .quotes2 a {
+  font-family: 'Source Code Pro', cursive;
+  margin: 2vw;
+  line-height: 3vw;
+  font-size: 2vw;
+  color: #f2e205;
+}
+.quotes2 p {
+  font-family: 'Source Code Pro';
+  color: #0DF205;
+  margin: 4vw;
+  font-size: 1.5vw;
+}
+.quotes2 {
+  border: 2px solid #EE05F2;
+  padding: 3vw;
+  margin: 0 14vw 0 14vw;
+}
+.quotes2 img {
+  width: 20vw;
+}
+.twoColumnContainer {
+  display: flex;
+  align-items: center;
+}
+#big {
+  width: 200%;
+}
+#victoria {
+  width: 40vw;
+  margin-left: 10vw;
+}
+
+/* ANIMATIONS */
+@keyframes grid {
+  from {background-position: 0 0;}
+  to {background-position: 5% 0;}
+}
+@keyframes hand {
+  0% {transform: rotate(-5deg);}
+  50% {transform: rotate(5deg);}
+  100% {transition: rotate(-5deg);}
+}
+@keyframes title {
+  0% {color: #EE05F2}
+  43% {color: #EE05F2}
+  44% {color: #0DF205}
+  66% {color: #0DF205}
+  67% {color: #F2E205}
+  100% {color: #F2E205}
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+  .decoration > #hand {
+    display: none;
+  }
+  #glitch {
+    display: none;
+  }
+  #big {
+    width: 20vw;
+  }
+
+}
