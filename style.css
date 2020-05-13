@@ -7,6 +7,11 @@ body, html {
   padding: 0;
 }
 
+.data-caption {
+  font-family: 'Source Code Pro', monospace;
+  color: #EE05F2;
+}
+
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -14,10 +19,8 @@ body, html {
   height: 100vh;
   overflow: hidden;
 }
-
-.decoration {
-  position: absolute;
-  z-index: -1;
+.blackBg {
+  background-color: black;
 }
 
 /* NAVIGATION */
@@ -55,7 +58,12 @@ body, html {
   transform: scaleY(2);
 }
 
+.decoration {
+  position: absolute;
+  z-index: -1;
+}
 .decoration > #hand {
+  z-index: -1;
   position: fixed;
   top: 22vh;
   right: 1vw;
@@ -87,7 +95,7 @@ body, html {
   font-size: 3rem;
   width: 125vw;
   opacity: 0.5;
-  transition: width, 2s;
+  animation: titleScale 2s;
 }
 .definitionContainer {
   display: flex;
@@ -165,13 +173,27 @@ body, html {
   position: sticky;
   bottom: 0;
 }
-.galleryContainer img {
+/* .galleryContainer img {
   width: 60%;
+} */
+.galleryContainer img {
+  width: 100%;
+}
+.grid {
+  margin: 0 10vmin 0 10vmin;
 }
 .grid-item {
+  margin-bottom: 10vmin;
+}
+.grid-sizer, .grid-item { width: 22%; }
+.gutter-sizer { width: 4%; }
+.grid-item--width2 { width: 48%; }
+
+
+/* .grid-item {
   margin-bottom: 10px;
   margin-left: 25vw;
-}
+} */
 .bg {
   height: 100%;
   position: fixed;
@@ -179,9 +201,6 @@ body, html {
 }
 
 /* ORIGINS PAGE */
-.originsPage {
-  background-color: black;
-}
 .quotes h2 {
   font-family: 'Source Code Pro', cursive;
   margin: 1vw;
@@ -205,9 +224,6 @@ body, html {
 }
 
 /* POST CYBERFEMINISM PAGE */
-.postPage {
-  background-color: black;
-}
 .quotes2 h2, .quotes2 a {
   font-family: 'Source Code Pro', cursive;
   margin: 2vw;
@@ -223,6 +239,7 @@ body, html {
 }
 .quotes2 {
   border: 2px solid #EE05F2;
+  background: black;
   padding: 3vw;
   margin: 0 14vw 0 14vw;
 }
@@ -242,6 +259,14 @@ body, html {
 }
 
 /* ANIMATIONS */
+@keyframes titleScale {
+  from {
+    font-size: 0px;
+  }
+  to {
+    font-size: 3rem;
+  }
+}
 @keyframes grid {
   from {background-position: 0 0;}
   to {background-position: 5% 0;}
